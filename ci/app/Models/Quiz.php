@@ -12,7 +12,7 @@ class Quiz extends Model
 
     protected $allowedFields = ['code','title','description','published','questions','answers'];
 
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';

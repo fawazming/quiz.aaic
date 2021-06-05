@@ -12,7 +12,7 @@ class Variables extends Model
 
     protected $allowedFields = ['key','value'];
 
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
