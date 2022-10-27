@@ -138,7 +138,7 @@
         }
         number()
         // Countdown
-        var cd = 100;
+        var cd = 375;
         var timer = new Timer();
         timer.start({
             countdown: true,
@@ -150,7 +150,7 @@
         tmr.start({
             countdown: true,
             startValues: {
-                seconds: cd - 90
+                seconds: 119
             }
         });
 
