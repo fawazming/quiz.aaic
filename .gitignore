@@ -1,7 +1,7 @@
 #-------------------------
 # Operating Specific Junk Files
 #-------------------------
-
+adminer/quiz
 # OS X
 .DS_Store
 .AppleDouble
