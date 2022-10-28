@@ -91,7 +91,7 @@
                 </ol>
                 <div class="text-center">
                     <a href="#!" id="prev" class="mt-2 p-1 px-4 border-2 rounded-lg bg-green-600 text-white hover:shadow-xl hover:text-green-500 hover:bg-white cursor-pointer hidden">Prev</a>
-                    <input type="submit" class="mt-2 p-1 px-4 border-2 rounded-lg bg-red-600 text-white hover:shadow-xl hover:text-red-500 hover:bg-white cursor-pointer" value="Submit Quiz">
+                    <input type="submit" id="subm" class="mt-2 p-1 px-4 border-2 rounded-lg bg-red-600 text-white hover:shadow-xl hover:text-red-500 hover:bg-white cursor-pointer hidden" value="Submit Quiz">
                     <a href="#!" id="next" class="mt-2 p-1 px-4 border-2 rounded-lg bg-green-600 text-white hover:shadow-xl hover:text-green-500 hover:bg-white cursor-pointer">Next</a>
                 </div>
 
@@ -111,10 +111,12 @@
     <script>
         let counter = 0;
         $('#next').click(()=>{
+            console.log(counter);
             $('#prev').removeClass('hidden');
             document.querySelectorAll('.quizz').item(counter).classList.remove('active')
             counter++
             if(counter+1 == document.querySelectorAll('.quizz').length){
+                $('#subm').removeClass('hidden');
                 $('#next').addClass('hidden');
             }
             document.querySelectorAll('.quizz').item(counter).classList.add('active');
@@ -128,6 +130,7 @@
 
             if(counter-1 == -1){
                 $('#prev').addClass('hidden');
+                $('#subm').addClass('hidden');
             }
             document.querySelectorAll('.quizz').item(counter).classList.add('active');
             number()
